@@ -1,0 +1,8 @@
+function generateNumber(prefix) {
+  const now = new Date();
+  const date = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}`;
+  const random = Math.floor(1000 + Math.random() * 9000);
+  return `${prefix}-${date}-${random}`;
+}
+
+module.exports = generateNumber;
